@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -11,4 +12,8 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
 
+  constructor(private scroller: ViewportScroller) {}
+  scrollTo(elementId: string) {
+    this.scroller.scrollToAnchor(elementId);
+  }
 }
