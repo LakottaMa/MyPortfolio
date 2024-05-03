@@ -1,8 +1,11 @@
-@import "../../styles.scss";
+@import "../../../styles.scss";
+
 
 section {
+    border: solid 2px rgb(116, 0, 139);
     width: 100vw;
     max-width: 1440px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;

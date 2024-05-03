@@ -1,0 +1,82 @@
+@import "../../../styles.scss";
+section {
+    position: relative;
+    width: 100vw;
+    max-width: 1440px;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    .me {
+        height: 700px;
+        margin-left: -20px;
+    }
+    span {
+        position: absolute;
+        transform: rotate(-90deg);
+        transform-origin: left bottom;
+        margin-top: 156px;
+        font-size: 4rem;
+    }
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    h1,
+    h2 {
+        text-align: center;
+    }
+}
+
+.seperator {
+    position: absolute;
+    height: 700px;
+    right: 0;
+    left: 0;
+    bottom: -188px;
+    z-index: -1;
+}
+
+.seperator-img {
+    background: url("../../../assets/img/mask_bg.png") no-repeat;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.scroll-down-arrow img {
+    position: absolute;
+    bottom: 0;
+    right: 96px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    a {
+        text-decoration: none;
+        height: 30px;
+        transition: all 0.175s;
+        &:hover {
+            transform: scale(1.35);
+        }
+    }
+}
+
+.mail {
+    font-size: 1.5rem;
+    &:hover {
+        transform: none !important;
+    }
+}
+
+@media screen and (max-width: 1310px) {
+    .text {
+        width: min-content;
+    }
+    section {
+        justify-content: space-around;
+    }
+}

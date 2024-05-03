@@ -41,7 +41,7 @@ $red: #e61c40;
 /* Scrollbalcken */
 ::-webkit-scrollbar {
     background-color: transparent;
-    width: 8px;
+    width: 10px;
     height: 0;
 }
 
@@ -50,15 +50,53 @@ $red: #e61c40;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $blue;
+    background: var(--scrollbar-thumb-color, $blue);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    box-shadow: 0px 0.2px 5px 2px $lightblue;
+    background: $lightblue;
 }
 
 body {
-    width: calc(100vw - 8%);
     background-color: $bg-primary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-1 {
+    align-self: center;
+    margin-top: 56px;
+    padding: 15px 30px;
+    box-shadow: 4px 4px 4px 0px #000000;
+    border-radius: 10px;
+    background-color: $lightblue;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.175s;
+
+    &:hover {
+        background-color: $blue;
+        scale: 1.1;
+    }
+}
+
+h1 {
+    font-size: 5.63rem;
+    line-height: 0.9;
+}
+
+h2 {
+    font-size: 3.5rem;
+    color: $blue;
+    font-weight: 400;
+    letter-spacing: 3.5px;
+    line-height: 0.9;
+    margin-top: 20px;
+}
+
+.line {
+    height: 4px;
 }

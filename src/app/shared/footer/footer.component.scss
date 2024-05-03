@@ -1,0 +1,33 @@
+@import "../../../styles.scss";
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    padding: 0 100px;
+    border-top: solid 4px $lightblue;
+
+    a {
+        text-decoration: none;
+    }
+
+    span {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    div {
+        display: flex;
+        gap: 2rem;
+
+        a {
+            height: 30px;
+            transition: all 0.175s;
+            &:hover {
+                transform: scale(1.35);
+            }
+        }
+    }
+}
