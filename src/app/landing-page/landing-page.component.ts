@@ -16,5 +16,5 @@ import { ProfilComponent } from "./profil/profil.component";
     imports: [HeaderComponent, FooterComponent, CommonModule, PortfolioComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, AboutMeComponent, SkillsComponent, ContactComponent, ProfilComponent]
 })
 export class LandingPageComponent {
-
+    
 }

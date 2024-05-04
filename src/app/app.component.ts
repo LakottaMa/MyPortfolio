@@ -13,7 +13,7 @@ import { FooterComponent } from './shared/footer/footer.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Marcel Lakotta Portfolio';
+  title = 'Marcel Lakotta';
 
   private scrollTimeout: any;
 

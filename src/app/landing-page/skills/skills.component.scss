@@ -8,9 +8,19 @@ section {
     padding: 0 100px;
 }
 
+button {
+    margin-top: 56px;
+    background-color: $lightblue;
+    &:hover {
+        background-color: $blue;
+        scale: 1.1;
+    }
+}
+
 .wrap-container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 280px;
     gap: 5rem;
     div {
         width: 102px;

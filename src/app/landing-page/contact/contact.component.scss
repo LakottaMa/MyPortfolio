@@ -1,6 +1,7 @@
 @import "../../../styles.scss";
 section {
-    border: solid 2px darkblue;
+    border-left: solid 2px darkblue;
+    border-right: solid 2px darkblue;
     width: 100vw;
     max-width: 1440px;
     height: 1000px;
