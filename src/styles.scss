@@ -84,6 +84,10 @@ body {
     border-radius: 10px;
 }
 
+.cp{
+    cursor: pointer;
+}
+
 .btn:active {
     background-color: #ffffff;
     color: #000000;
@@ -107,4 +111,31 @@ h2 {
 
 .line {
     height: 4px;
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+@media screen and (max-width: 1310px) {
+    .text {
+        width: min-content;
+    }
+    section {
+        justify-content: space-around;
+    }
 }

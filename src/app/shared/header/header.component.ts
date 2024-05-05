@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -10,10 +9,17 @@ import { ViewportScroller } from '@angular/common';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
 
-  constructor(private scroller: ViewportScroller) {}
-  scrollTo(elementId: string) {
-    this.scroller.scrollToAnchor(elementId);
+export class HeaderComponent {
+  isActiveLink: string = '';
+
+  setActiveLink(link: string): void {
+    this.isActiveLink = link;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0 });
+    this.isActiveLink = '';
+
   }
 }

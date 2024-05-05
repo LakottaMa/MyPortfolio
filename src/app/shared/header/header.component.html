@@ -1,8 +1,8 @@
 <section>
-    <h5>Marcel</h5>
-    <nav>
-        <a href="#" (click)="scrollTo('aboutMe')">About me</a>
-        <a href="#" (click)="scrollTo('mySkills')">Skills</a>
-        <a href="#" (click)="scrollTo('portfolio')">Portfolio</a>
-    </nav>
+    <h5 (click)="scrollToTop()" class="cp">Marcel</h5>
+<nav>
+    <a href="#aboutMe" [ngClass]="{'active': isActiveLink === 'aboutMe'}" (click)="setActiveLink('aboutMe')">About me</a>
+    <a href="#mySkills" [ngClass]="{'active': isActiveLink === 'mySkills'}" (click)="setActiveLink('mySkills')">Skills</a>
+    <a href="#portfolio" [ngClass]="{'active': isActiveLink === 'portfolio'}" (click)="setActiveLink('portfolio')">Portfolio</a>
+  </nav>  
 </section>

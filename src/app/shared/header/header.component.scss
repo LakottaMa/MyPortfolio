@@ -2,11 +2,15 @@
 
 
 section {
+    position: sticky;
+    top: 0;
+    background-color: $bg-primary-color;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100px;
     padding: 0 100px;
+    z-index: 1;
 
     h5 {
         font-size: 2rem;
@@ -17,11 +21,32 @@ section {
         gap: 2rem;
 
         a {
+            position: relative;
             text-decoration: none;
             font-size: 1.5rem;
+            &.active {
+                color: $lightblue;
+              }
             &:hover {
                 color: $lightblue;
             }
+            &::before {
+                position: absolute;
+                content: "";
+                background-color: $blue;
+                border-radius: 5px;
+                bottom: -8px;
+                height: 4px;
+                width: 0;
+                left: 0;
+                transition: all 0.125s ease-out;
+            }
+            &:hover::before {
+                width: 50%;
+            }
+            &.active::before {
+                width: 100%;
+              }
         }
     }
 }
