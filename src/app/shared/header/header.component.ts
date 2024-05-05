@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ServicesComponent } from '../services/services.component';
 
 @Component({
   selector: 'app-header',
@@ -11,15 +12,16 @@ import { RouterModule } from '@angular/router';
 })
 
 export class HeaderComponent {
-  isActiveLink: string = '';
-
+  constructor(private servicesComponent: ServicesComponent) { }
   setActiveLink(link: string): void {
-    this.isActiveLink = link;
+    this.servicesComponent.setActiveLink(link);
   }
 
   scrollToTop(): void {
-    window.scrollTo({ top: 0 });
-    this.isActiveLink = '';
+    this.servicesComponent.scrollToTop();
+  }
 
+  get isActiveLink(): string {
+    return this.servicesComponent.isActiveLink;
   }
 }
