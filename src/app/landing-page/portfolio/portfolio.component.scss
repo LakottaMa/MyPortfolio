@@ -1,13 +1,42 @@
 @import "../../../styles.scss";
 
-
 section {
-    border-left: solid 2px rgb(116, 0, 139);
-    border-right: solid 2px rgb(116, 0, 139);
-    width: 100vw;
-    max-width: 1440px;
-    height: 800px;
+    flex-direction: column;
+    margin-top: 280px;
+}
+
+.headline {
+    width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    span {
+        margin-top: 36px;
+    }
+}
+
+.title {
+    width: 100%;
+    padding-left: 25%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    h1 {
+        justify-tracks: center;
+    }
+}
+
+.line1 {
+    width: 110px;
+    margin: 0 36px;
+    background-color: $blue;
+}
+
+.line2 {
+    position: absolute;
+    right: 0;
+    width: 484px;
+    max-width: 484px;
+    margin-left: 36px;
+    background-color: $blue;
 }
