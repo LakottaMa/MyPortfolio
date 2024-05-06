@@ -1,10 +1,7 @@
 @import "../../../styles.scss";
 section {
     position: relative;
-    width: 100vw;
-    max-width: 1440px;
-    padding: 0 100px;
-    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     .me {
         height: 700px;
@@ -20,7 +17,6 @@ section {
 }
 
 button {
-    margin-top: 56px;
     background-color: $lightblue;
     &:hover {
         background-color: $blue;
@@ -36,6 +32,10 @@ button {
     h2 {
         text-align: center;
     }
+}
+
+.text:nth-last-child(1){
+    align-items: center;
 }
 
 .seperator {
@@ -81,4 +81,3 @@ button {
         transform: none !important;
     }
 }
-

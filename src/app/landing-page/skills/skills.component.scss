@@ -1,15 +1,11 @@
 @import "../../../styles.scss";
 section {
     position: relative;
-    width: 100vw;
-    max-width: 1440px;
-    display: flex;
-    align-items: center;
-    padding: 0 100px;
+    justify-content: space-between;
+    margin-top: 280px;
 }
 
 button {
-    margin-top: 56px;
     background-color: $lightblue;
     &:hover {
         background-color: $blue;
@@ -18,9 +14,9 @@ button {
 }
 
 .wrap-container {
+    width: 720px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 280px;
     gap: 5rem;
     div {
         width: 102px;
@@ -40,20 +36,24 @@ button {
 }
 
 .text {
-    text-align: end;
+    min-width: 480px;
+    width: 480px;
     display: flex;
     flex-direction: column;
     padding-left: 40px;
     div {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
         img {
             position: absolute;
             right: 0;
         }
     }
     p {
-        margin-top: 16px;
+        margin: 16px 0 0 24px;
     }
+}
+
+.text:nth-last-child(1) {
+    align-items: center;
 }
