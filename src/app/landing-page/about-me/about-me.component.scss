@@ -1,15 +1,11 @@
 @import "../../../styles.scss";
 
 section {
-    width: 100vw;
-    max-width: 1440px;
-    display: flex;
-    align-items: center;
+    justify-content: space-between;
 }
 
 aside {
-    width: 60%;
-    padding: 0 100px;
+    width: 470px;
     margin-top: 140px;
     h1 {
         margin-bottom: 35px;
@@ -23,7 +19,7 @@ aside {
 .aboutme-shortbox {
     display: flex;
     margin-top: 35px;
-    p{
+    p {
         margin-left: 35px;
     }
     img {
@@ -40,6 +36,14 @@ aside {
     margin-left: 14px;
 }
 
+.me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -100px;
+
+}
+
 .me-photo-ellipse {
     height: 400px;
     min-width: 400px;
@@ -47,10 +51,9 @@ aside {
     border-radius: 100%;
     background: url("/assets/img/me_photo2.png") no-repeat;
     background-position-y: 50px;
-
 }
 .line {
-    width: 100%;
+    width: 260px;
     max-width: 200px;
     background-color: $lightblue;
 }
