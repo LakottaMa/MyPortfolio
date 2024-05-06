@@ -73,6 +73,20 @@ body {
     align-items: center;
 }
 
+section{
+    width: 100vw;
+    max-width: 1440px;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+}
+
+.text a{
+    width: max-content;
+    height: 0;
+    margin-top: 56px;
+}
+
 .btn {
     align-self: center;
     border: none;
@@ -89,7 +103,7 @@ body {
 }
 
 .btn:active {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     color: #000000;
     scale: .95;
 }
@@ -129,13 +143,4 @@ h2 {
 		-ms-transform:     translateY(-15px);
 		transform:         translateY(-15px)
 	}
-}
-
-@media screen and (max-width: 1310px) {
-    .text {
-        width: min-content;
-    }
-    section {
-        justify-content: space-around;
-    }
 }

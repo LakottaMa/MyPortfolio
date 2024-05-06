@@ -1,0 +1,60 @@
+@import "../../../styles.scss";
+@import "../../landing-page/portfolio/portfolio.component.scss";
+
+section {
+    margin-top: 116px;
+    justify-content: space-around;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    flex: 2;
+    width: 100%;
+    max-width: 510px;
+    min-width: 200px;
+    h3{
+        font-size: 2.5rem;
+        color: $blue;
+    }
+    span{
+        font-size: 1.5rem;
+        color: $lightblue;
+    }
+}
+
+.img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 340px;
+    img {
+        height: 100%;
+    }
+}
+
+.buttons {
+    display: flex;
+    gap: 86px;
+}
+
+.btn-live-test {
+    background-color: $blue;
+    &:hover {
+        background-color: $lightblue;
+        scale: 1.1;
+    }
+}
+
+.btn-github {
+    border: solid 1px $lightblue;
+    background-color: $bg-primary-color;
+    &:hover {
+        background-color: $lightblue;
+        scale: 1.1;
+    }
+}
