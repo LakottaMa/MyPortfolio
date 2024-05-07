@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -11,20 +11,25 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact.component.scss'
 })
 
-export class ContactComponent implements OnInit {
-
+export class ContactComponent {
   mailSent: boolean = false;
   mailError: boolean = false;
   messageState: string = 'hidden';
-  ngOnInit(): void {
-    this.messageState = this.mailSent ? 'success' : this.mailError ? 'error' : 'hidden';
-  }
+
+  constructor(private http: HttpClient) {}
   showMessage(type: string) {
-    this.messageState = 'closing';
-    setTimeout(() => this.messageState = 'hidden', 2050);
+    this.messageState = 'hidden';
+    setTimeout(() => {
+      this.messageState = 'visible';
+      setTimeout(() => {
+        this.messageState = 'closing';
+        setTimeout(() => {
+          this.messageState = 'hidden';
+        }, 500);
+      }, 2500);
+    }, 0);
   }
 
-  http = inject(HttpClient);
   contactData = {
     name: '',
     email: '',
@@ -41,26 +46,30 @@ export class ContactComponent implements OnInit {
       },
     },
   };
+
   onSubmit(ngForm: NgForm) {
-    console.log("Form submitted");
     if (ngForm.submitted && ngForm.form.valid) {
-      console.log("Form is valid");
+
+      if (!navigator.onLine) {
+        console.error("no internet connection");
+        this.mailError = true;
+        this.mailSent = false;
+        this.showMessage('error');
+        return;
+      }
+
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log("Mail sent successfully");
             this.mailSent = true;
             this.mailError = false;
+            this.showMessage('success');
             ngForm.resetForm();
           },
           error: (error) => {
-            console.error("Error sending mail", error);
             this.mailError = true;
             this.mailSent = false;
-          },
-          complete: () => {
-            console.log("Mail sending completed");
-            console.info('send post complete');
+            this.showMessage('error');
           },
         });
     } else if (ngForm.submitted && ngForm.form.valid) {

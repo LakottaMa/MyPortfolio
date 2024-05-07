@@ -48,6 +48,18 @@ form {
     display: flex;
     flex-direction: column;
     margin-bottom: 32px;
+
+    input.ng-valid,
+    textarea.ng-valid {
+        &:hover {
+            pointer-events: none;
+        }
+        &:focus {
+            outline: none;
+        }
+        border-color: $green;
+    }
+
     input,
     textarea {
         padding: 10px;
@@ -78,25 +90,31 @@ form {
 
 .message-container {
     position: fixed;
-    bottom: -100px; /* Startposition außerhalb des Bildschirms */
+    bottom: -100px;
     left: 50%;
     transform: translateX(-50%);
     padding: 20px;
     border-radius: 10px;
-    background-color: $grey; /* Hintergrundfarbe anpassen */
     box-shadow: 4px 4px 4px 0px #000000;
-    transition: bottom 0.5s ease; /* Animationseigenschaften */
+    transition: 0.5s ease-in-out;
     font-size: 1.5rem;
     z-index: 9999;
 }
 
+.slide-in {
+    bottom: 50%;
+}
+
+.slide-out {
+    bottom: -100px;
+}
+
 .success {
-    background-color: $green; /* Erfolgsnachrichten Hintergrundfarbe anpassen */
+    background-color: $green;
     color: $bg-primary-color;
 }
 
 .error {
-    background-color: $red; /* Fehlermeldungen Hintergrundfarbe anpassen */
+    background-color: $red;
     color: #fff;
 }
-

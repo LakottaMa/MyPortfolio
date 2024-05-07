@@ -38,10 +38,12 @@
             <button class="btn" type="submit">Send message :)</button>
         </form>
     </div>
-    <div *ngIf="mailSent" class="message-container success"
-        [ngStyle]="{'bottom': messageState === 'visible' ? '50%' : '-100px'}">Mail sent successfully!</div>
-
-    <div *ngIf="mailError" class="message-container error"
-        [ngStyle]="{'bottom': messageState === 'visible' ? '50%' : '-100px'}">Error sending mail. Please try again
-        later.</div>
+    <div *ngIf="mailSent" class="message-container success" [ngClass]="{'slide-in': messageState === 'visible', 'slide-out': messageState === 'closing'}">
+        Mail sent successfully!
+    </div>
+    
+    <div *ngIf="mailError" class="message-container error" [ngClass]="{'slide-in': messageState === 'visible', 'slide-out': messageState === 'closing'}">
+        Error sending mail. Please try again later.
+    </div>
+    
 </section>
