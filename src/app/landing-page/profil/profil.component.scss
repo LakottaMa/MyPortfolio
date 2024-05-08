@@ -1,22 +1,31 @@
 @import "../../../styles.scss";
+@import"../../../media-style.scss";
 section {
     position: relative;
     align-items: flex-start;
-    justify-content: space-between;
+    // justify-content: space-between;
     .me {
         height: 700px;
         margin-left: -20px;
     }
+}
+
+.headline-parts {
+    display: flex;
+    align-items: center;
     span {
-        position: absolute;
-        transform: rotate(-90deg);
-        transform-origin: left bottom;
-        margin-top: 156px;
-        font-size: 4rem;
+        margin-right: -30px;
+        -webkit-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+        -o-transform: rotate(270deg);
+        transform: rotate(270deg);
+        font-size: 3.9rem;
     }
 }
 
 button {
+    margin-top: 44px;
     background-color: $lightblue;
     &:hover {
         background-color: $blue;
@@ -24,14 +33,20 @@ button {
     }
 }
 
-.text {
+.headline {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
-    h1,
-    h2 {
-        text-align: center;
-    }
+}
+
+.profil-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 220px);
+    left: calc(100% - 868px);
+    z-index: 2;
 }
 
 .text:nth-last-child(1) {

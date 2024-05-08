@@ -1,6 +1,146 @@
+@media screen and (max-width: 1350px) {
+    .profil-wrapper {
+        top: calc(50% - 230px) !important;
+    }
+}
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1260px) {
+    .me-photo-ellipse {
+        height: 300px !important;
+        width: 300px !important;
+        background-position-y: 20px !important;
+        background-position-x: -50px !important;
+    }
     .contact-form {
         flex-direction: column;
+    }
+
+    .img-line-right {
+        width: 120px !important;
+    }
+
+    aside p {
+        font-size: 1.25rem !important;
+    }
+
+    h1 {
+        font-size: 4.5rem !important;
+    }
+    h2 {
+        font-size: 2.9rem !important;
+    }
+    .profil-wrapper {
+        left: calc(100% - 740px) !important;
+        top: calc(50% - 200px) !important;
+    }
+    .headline-parts span {
+        font-size: 3.35rem !important;
+    }
+
+    .me {
+        height: 600px !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .profil-wrapper {
+        left: calc(100% - 670px) !important;
+        top: calc(50% - 170px) !important;
+    }
+    .profil-wrap {
+        flex-direction: column !important;
+    }
+    .me {
+        height: 500px !important;
+    }
+    .headline-parts span {
+        font-size: 3.1rem !important;
+    }
+    h1 {
+        font-size: 4rem !important;
+    }
+    h2 {
+        font-size: 2.55rem !important;
+    }
+    h3 {
+        font-size: 2rem !important;
+    }
+    .btn {
+        font-size: 1.25rem !important;
+        padding: 12px 26px;
+    }
+    .wrapper {
+        gap: 12px !important;
+        img {
+            height: 240px !important;
+        }
+        span{
+            font-size: 1.25rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .img-line-right {
+        width: 80px !important;
+    }
+
+    .me-photo-ellipse {
+        height: 250px !important;
+        width: 250px !important;
+        background-size: 280px !important;
+        background-position-y: 30px !important;
+        background-position-x: -20px !important;
+    }
+    .me {
+        height: 400px !important;
+    }
+
+    .mg-top {
+        margin-top: 100px !important;
+    }
+
+    .wrap-container {
+        gap: 1.5rem !important;
+    }
+    .wrapper {
+        .buttons {
+            gap: 48px;
+        }
+    }
+
+    .mail {
+        font-size: 1.25rem !important;
+        line-height: normal !important;
+    }
+
+    form{
+        width: 100% !important;
+        button span{
+            font-size: 1.25rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profil-wrapper {
+        left: calc(100% - 570px) !important;
+        top: calc(50% - 150px) !important;
+    }
+    .headline-parts span {
+        font-size: 2.5rem !important;
+    }
+    h1 {
+        font-size: 3.5rem !important;
+    }
+    h2 {
+        font-size: 2.25rem !important;  
+    }
+    h3 {
+        font-size: 1.75rem !important;
+    }
+    .btn {
+        font-size: 1.1rem !important;
+        padding: 10px 22px;
     }
 }

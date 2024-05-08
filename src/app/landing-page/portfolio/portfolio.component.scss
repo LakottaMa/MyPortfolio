@@ -1,12 +1,13 @@
 @import "../../../styles.scss";
+@import "../../../media-style.scss";
 
 section {
     flex-direction: column;
-    margin-top: 280px;
+    align-items: center;
 }
 
 .headline {
-    width: 1440px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,26 +18,32 @@ section {
 
 .title {
     width: 100%;
-    padding-left: 25%;
-    position: relative;
     display: flex;
     align-items: center;
-    h1 {
-        justify-tracks: center;
-    }
 }
 
+.line-left {
+    position: relative;
+    flex: 1;
+}
+
+
+.line-right {
+    position: relative;
+    flex: 1;
+}
+
+
 .line1 {
-    width: 110px;
-    margin: 0 36px;
     background-color: $blue;
+    position: absolute;
+    width: 110px;
+    right: 36px;
 }
 
 .line2 {
-    position: absolute;
-    right: 0;
-    width: 484px;
-    max-width: 484px;
-    margin-left: 36px;
     background-color: $blue;
+    position: absolute;
+    left: 36px;
+    right: -100px;
 }

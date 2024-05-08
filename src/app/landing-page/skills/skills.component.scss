@@ -1,8 +1,8 @@
 @import "../../../styles.scss";
+@import "../../../media-style.scss";
 section {
     position: relative;
     justify-content: space-between;
-    margin-top: 280px;
 }
 
 button {
@@ -14,10 +14,9 @@ button {
 }
 
 .wrap-container {
-    width: 720px;
     display: flex;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 4.5rem;
     div {
         width: 102px;
         height: 102px;
@@ -56,4 +55,32 @@ button {
 
 .text:nth-last-child(1) {
     align-items: center;
+}
+
+@media screen and (max-width: 1350px) {
+    section {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+    .wrap-container {
+        width: 100%;
+        max-width: 650px;
+        margin-bottom: 100px;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .text a{
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        bottom: 0;
+    }
+    .text {
+        align-self: end;
+        text-align: end;
+        h1{
+            margin-right: -130px;
+        }
+    }
 }

@@ -74,6 +74,7 @@ body {
 }
 
 section{
+    border: 1px solid red;
     width: 100vw;
     max-width: 1440px;
     padding: 0 100px;
@@ -132,13 +133,17 @@ h2 {
     font-size: 3.5rem;
     color: $blue;
     font-weight: 400;
-    letter-spacing: 3.5px;
+    letter-spacing: 3.1px;
     line-height: 0.9;
     margin-top: 20px;
 }
 
 .line {
     height: 4px;
+}
+
+.mg-top {
+    margin-top: 280px;
 }
 
 /** Message sending Contact Form */
