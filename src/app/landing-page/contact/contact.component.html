@@ -6,44 +6,52 @@
     <div class="contact-form">
         <div class="text">
             <h3>Got a problem to solve?</h3>
-            <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to
-                your projects with my work.</p>
+            <p>Contact me through this form, I am interested in hearing from you,
+                knowing your ideas and contributing to your projects with my work.</p>
             <p>Need a Frontend developer? <span>Contact me!</span></p>
         </div>
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="form-group">
-                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="user_name"
-                    placeholder="Your name" required>
+                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" minlength="5" name="user_name" placeholder="Your name" required>
                 <div class="error-input" *ngIf="name.invalid && (name.dirty || name.touched)">
                     <span *ngIf="name.errors?.['required']">Your name is empty</span>
                 </div>
             </div>
             <div class="form-group">
-                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="user_email"
-                    placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="user_email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                 <div class="error-input" *ngIf="email.invalid && (email.dirty || email.touched)">
                     <span *ngIf="email.errors?.['required']">Your email is empty</span>
                     <span *ngIf="email.errors?.['pattern']">Please enter a valid email address</span>
                 </div>
             </div>
             <div class="form-group">
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" rows="10" minlength="10"
-                    name="user_message" placeholder="Your message" required></textarea>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" rows="10" minlength="10" name="user_message" placeholder="Your message" required></textarea>
                 <div class="error-input" *ngIf="message.invalid && (message.dirty || message.touched)">
                     <span *ngIf="message.errors?.['required']">Your message is empty.</span>
-                    <span *ngIf="message.errors?.['minlength'] && !message.errors?.['required']">Your message must be at
-                        least 10 characters long.</span>
+                    <span *ngIf="message.errors?.['minlength'] && !message.errors?.['required']">Your message must be at least 10 characters long.</span>
                 </div>
             </div>
-            <button class="btn" type="submit">Send message :)</button>
+            <div class="checkout">
+                <div>
+                    <input type="checkbox" id="c1" [checked]="checked" (change)="checked = !checked" required>
+                    <label for="c1"></label>
+                    <span> I've read the <a href="#">privacy policy</a> anagree to the processing of my data as outlined.</span>
+                </div>
+                <div class="error-input" *ngIf="!checked && contactForm.valid">
+                    <span *ngIf="!contactForm.errors?.['required']">Please accept the privacy policy.</span>
+                </div>
+                <button class="btn" type="submit" [ngClass]="{'blue-background': checked && contactForm.valid, 'default-background': !(checked && contactForm.valid)}">
+                    <span>Send message :&#41;</span>
+                </button>
+            </div>
         </form>
     </div>
-    <div *ngIf="mailSent" class="message-container success" [ngClass]="{'slide-in': messageState === 'visible', 'slide-out': messageState === 'closing'}">
+    <div *ngIf="mailSent" class="message-container success"
+        [ngClass]="{'slide-in': messageState === 'visible', 'slide-out': messageState === 'closing'}">
         Mail sent successfully!
     </div>
-    
-    <div *ngIf="mailError" class="message-container error" [ngClass]="{'slide-in': messageState === 'visible', 'slide-out': messageState === 'closing'}">
+    <div *ngIf="mailError" class="message-container error"
+        [ngClass]="{'slide-in': messageState === 'visible', 'slide-out': messageState === 'closing'}">
         Error sending mail. Please try again later.
     </div>
-    
 </section>

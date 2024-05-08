@@ -15,8 +15,9 @@ export class ContactComponent {
   mailSent: boolean = false;
   mailError: boolean = false;
   messageState: string = 'hidden';
+  checked: boolean = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   showMessage(type: string) {
     this.messageState = 'hidden';
     setTimeout(() => {
@@ -48,7 +49,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
+    if (ngForm.submitted && ngForm.form.valid && this.checked) {
 
       if (!navigator.onLine) {
         console.error("no internet connection");
@@ -72,7 +73,7 @@ export class ContactComponent {
             this.showMessage('error');
           },
         });
-    } else if (ngForm.submitted && ngForm.form.valid) {
+    } else if (ngForm.submitted && ngForm.form.valid && this.checked) {
       ngForm.resetForm();
     }
   }
