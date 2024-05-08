@@ -1,6 +1,10 @@
 import { Routes } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
-    { path: '', component: LandingPageComponent }
+    { path: '', component: LandingPageComponent },
+    { path: 'privacy-policy', component: PrivacyPolicyComponent },
+    { path: 'imprint', component: ImprintComponent }
 ];

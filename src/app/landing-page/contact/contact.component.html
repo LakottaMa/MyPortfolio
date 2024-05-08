@@ -35,7 +35,7 @@
                 <div>
                     <input type="checkbox" id="c1" [checked]="checked" (change)="checked = !checked" required>
                     <label for="c1" class="cp"></label>
-                    <span> I've read the <a href="#">privacy policy</a> anagree to the processing of my data as outlined.</span>
+                    <span> I've read the <a href="/privacy-policy" target="_blank">privacy policy</a> anagree to the processing of my data as outlined.</span>
                 </div>
                 <div class="error-input" *ngIf="!checked && contactForm.valid">
                     <span *ngIf="!contactForm.errors?.['required']">Please accept the privacy policy.</span>
