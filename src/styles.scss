@@ -109,6 +109,19 @@ section{
     scale: .95;
 }
 
+.blue-background {
+    background-color: $lightblue !important;
+    &:hover {
+        padding: 22px 38px;
+    }
+    &:active {
+        padding: 20px 36px;
+        span{
+        color: #000000;
+        }
+    }
+}
+
 h1 {
     font-size: 5.4rem;
     font-weight: 700;
@@ -127,6 +140,39 @@ h2 {
 .line {
     height: 4px;
 }
+
+/** Message sending Contact Form */
+.message-container {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px #000000;
+    transition: 0.5s ease-in-out;
+    font-size: 1.5rem;
+    z-index: 9999;
+}
+
+.slide-in {
+    bottom: 50%;
+}
+
+.slide-out {
+    bottom: -100px;
+}
+
+.success {
+    background-color: $green;
+    color: $bg-primary-color;
+}
+
+.error {
+    background-color: $red;
+    color: #fff;
+}
+
 
 @keyframes bounce {
 	0%, 100%, 20%, 50%, 80% {

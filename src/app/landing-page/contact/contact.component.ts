@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { ServicesComponent } from '../../shared/services/services.component';
 
 @Component({
   selector: 'app-contact',
@@ -12,12 +13,22 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class ContactComponent {
+  [x: string]: any;
+
   mailSent: boolean = false;
   mailError: boolean = false;
   messageState: string = 'hidden';
   checked: boolean = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(private servicesComponent: ServicesComponent, private http: HttpClient) { }
+
+  scrollToTop(): void {
+    this.servicesComponent.scrollToTop();
+  }
+
+  get isActiveLink(): string {
+    return this.servicesComponent.isActiveLink
+  }
   showMessage(type: string) {
     this.messageState = 'hidden';
     setTimeout(() => {
