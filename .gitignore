@@ -38,7 +38,8 @@ testem.log
 /typings
 
 # System files
-/sendMail.php
+sendMail.php
 .gitignore
 .DS_Store
 Thumbs.db
+.htaccess
