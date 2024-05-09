@@ -122,7 +122,7 @@ textarea {
     display: inline-block;
     width: 26px;
     height: 26px;
-    margin-right: 8px;
+    margin-right: 10px;
     background: url("../../../assets/img/ckeckbox_unchecked.png") no-repeat;
 }
 
@@ -141,5 +141,11 @@ textarea {
         svg path {
             fill: $lightblue;
         }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .headline {
+        margin-left: -100px;
     }
 }

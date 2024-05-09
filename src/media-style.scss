@@ -40,6 +40,10 @@
     .me {
         height: 600px !important;
     }
+
+    .seperator {
+        height: 696px !important;
+    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -47,14 +51,14 @@
         left: calc(100% - 670px) !important;
         top: calc(50% - 170px) !important;
     }
+    .headline-parts span {
+        font-size: 3.1rem !important;
+    }
     .profil-wrap {
         flex-direction: column !important;
     }
     .me {
-        height: 500px !important;
-    }
-    .headline-parts span {
-        font-size: 3.1rem !important;
+        height: 420px !important;
     }
     h1 {
         font-size: 4rem !important;
@@ -74,15 +78,64 @@
         img {
             height: 240px !important;
         }
-        span{
+        span {
             font-size: 1.25rem !important;
         }
+    }
+
+    .seperator {
+        height: 680px !important;
     }
 }
 
 @media screen and (max-width: 1024px) {
+    section {
+        padding: 0 50px !important;
+    }
+
+    .scroll-down-arrow img {
+        right: 46px !important;
+        width: 24px !important;
+    }
+
+    .profil-wrapper {
+        left: calc(100% - 480px) !important;
+        top: calc(50% - 160px) !important;
+        h1 {
+            font-size: 3rem !important;
+        }
+        h2 {
+            font-size: 2rem !important;
+            margin: 16px 0 0 0;
+            letter-spacing: 1.5px;
+        }
+    }
+    .headline-parts span {
+        font-size: 2.8rem !important;
+    }
+
+    .headline-parts span {
+        font-size: 2.4rem !important;
+        margin-right: -20px !important;
+    }
+
+    .seperator {
+        height: 670px !important;
+    }
+
     .img-line-right {
-        width: 80px !important;
+        margin-right: 50px;
+        width: 30px !important;
+    }
+
+    .aboutme-shortbox {
+        p {
+            margin-left: 24px !important;
+        }
+        img {
+            height: 40px !important;
+            margin-left: 22px !important;
+        }
     }
 
     .me-photo-ellipse {
@@ -94,6 +147,7 @@
     }
     .me {
         height: 400px !important;
+        margin-left: 15px !important;
     }
 
     .mg-top {
@@ -109,32 +163,70 @@
         }
     }
 
+    .line2 {
+        right: -50px !important;
+    }
+
     .mail {
         font-size: 1.25rem !important;
         line-height: normal !important;
     }
 
-    form{
+    form {
         width: 100% !important;
-        button span{
+        padding: 0 50px;
+
+        button span {
             font-size: 1.25rem !important;
         }
+    }
+
+    .contact-form {
+        margin: 50px 0 130px 0 !important;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    aside {
+        margin-top: 100px !important;
+    }
+
+    h1 {
+        font-size: 3rem !important;
+    }
+
+    .btn {
+        font-size: 1.125rem !important;
+        padding: 10px 24px;
+    }
+    .wrapper {
+        gap: 12px !important;
+        img {
+            height: 200px !important;
+        }
+        span {
+            font-size: 1.125rem !important;
+        }
+    }
+    .mg-top {
+        margin-top: 70px !important;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .profil-wrapper {
-        left: calc(100% - 570px) !important;
-        top: calc(50% - 150px) !important;
+    .mail {
+        display: none;
     }
-    .headline-parts span {
-        font-size: 2.5rem !important;
+    aside {
+        width: fit-content !important;
+        margin-top: 70px !important;
+        p {
+            font-size: 1.125rem !important;
+        }
     }
-    h1 {
-        font-size: 3.5rem !important;
-    }
-    h2 {
-        font-size: 2.25rem !important;  
+    .me-photo-ellipse,
+    .img-line-right {
+        display: none;
     }
     h3 {
         font-size: 1.75rem !important;
@@ -143,4 +235,78 @@
         font-size: 1.1rem !important;
         padding: 10px 22px;
     }
+    .wrapper {
+        gap: 0 !important;
+        flex-direction: column;
+    }
+    .wrap-reverse {
+        flex-direction: column-reverse;
+    }
+    .text{
+        h3, p {
+            text-align: center;
+        }
+        span{
+            display: flex;
+            justify-content: center;
+        }
+        .buttons {
+            justify-content: center;
+            a{
+                margin-top: 24px;
+            }
+        }
+    }
 }
+
+@media screen and (max-width: 700px) {
+    form{
+        padding: 0 10px;
+    }
+    nav{
+        gap: 1rem !important;
+        a{
+            font-size: 1.125rem !important;
+        }
+    }
+
+    .scroll-down-arrow {
+        display: none;
+    }
+
+    .profil-wrap{
+        align-items: center;
+    }
+
+    .profil-wrapper {
+        width: 100%;
+        left: 0 !important;
+        top: 100% !important;
+    }
+
+    .social-links {
+        padding-top: 260px;
+    }
+
+    .wrap-container {
+        margin: 0 0 60px !important;
+        img{
+        height: 45px;
+        }
+        span{
+            font-size: 1rem !important;
+        }
+    }
+
+}
+
+@media screen and (max-width: 536px) {
+    nav{
+        display: none !important;
+    }
+    .wrap-container {
+        gap: 0 !important;
+    }
+}
+
+
