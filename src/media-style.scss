@@ -13,6 +13,9 @@
     }
     .contact-form {
         flex-direction: column;
+        .text {
+            width: 100% !important;
+        }
     }
 
     .img-line-right {
@@ -110,9 +113,6 @@
             letter-spacing: 1.5px;
         }
     }
-    .headline-parts span {
-        font-size: 2.8rem !important;
-    }
 
     .headline-parts span {
         font-size: 2.4rem !important;
@@ -124,8 +124,7 @@
     }
 
     .img-line-right {
-        margin-right: 50px;
-        width: 30px !important;
+        width: 50px !important;
     }
 
     .aboutme-shortbox {
@@ -147,7 +146,7 @@
     }
     .me {
         height: 400px !important;
-        margin-left: 15px !important;
+        margin: 0 -50px 0 15px !important;
     }
 
     .mg-top {
@@ -183,6 +182,12 @@
 
     .contact-form {
         margin: 50px 0 130px 0 !important;
+    }
+    .contact-form {
+        h3,
+        p {
+            margin: 25px 50px !important;
+        }
     }
 }
 
@@ -242,30 +247,49 @@
     .wrap-reverse {
         flex-direction: column-reverse;
     }
-    .text{
-        h3, p {
+    .text {
+        h3,
+        p {
             text-align: center;
         }
-        span{
+        span {
             display: flex;
             justify-content: center;
         }
         .buttons {
             justify-content: center;
-            a{
+            a {
                 margin-top: 24px;
             }
+        }
+    }
+    .contact-form {
+        h3,
+        p {
+            text-align: start;
         }
     }
 }
 
 @media screen and (max-width: 700px) {
-    form{
+    .headline img {
+        margin-right: 10px !important;
+    }
+    form {
         padding: 0 10px;
     }
-    nav{
+    .contact-form {
+        h3,
+        p {
+            margin: 25px 10px !important;
+        }
+    }
+    .me {
+        margin: 0 !important;
+    }
+    nav {
         gap: 1rem !important;
-        a{
+        a {
             font-size: 1.125rem !important;
         }
     }
@@ -274,13 +298,13 @@
         display: none;
     }
 
-    .profil-wrap{
+    .profil-wrap {
         align-items: center;
     }
 
     .profil-wrapper {
         width: 100%;
-        left: 0 !important;
+        left: -10px !important;
         top: 100% !important;
     }
 
@@ -290,23 +314,127 @@
 
     .wrap-container {
         margin: 0 0 60px !important;
-        img{
-        height: 45px;
+        img {
+            height: 45px;
         }
-        span{
+        span {
             font-size: 1rem !important;
         }
     }
-
 }
 
 @media screen and (max-width: 536px) {
-    nav{
+    nav {
         display: none !important;
     }
     .wrap-container {
         gap: 0 !important;
     }
+
+    .headline-parts {
+        h1 {
+            font-size: 2.5rem !important;
+        }
+        h2 {
+            font-size: 1.65rem !important;
+            margin-top: 10px;
+        }
+        span {
+            font-size: 1.85rem !important;
+        }
+    }
+    .contact-form {
+        h3 {
+            font-size: 1.5rem !important;
+            margin: 0 0 25px 0 !important;
+        }
+        .text p {
+            margin: 16px 0 !important;
+        }
+    }
+    form {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    .line1 {
+        width: 55px !important;
+        right: 13px !important;
+    }
+    .line2 {
+        right: -25px !important;
+        left: 13px !important;
+    }
+    .social-links {
+        padding-top: 220px;
+    }
 }
 
+@media screen and (max-width: 480px) {
+    section {
+        padding: 0 25px !important;
+    }
+    .text {
+        h1 {
+            margin: 0 12px !important;
+        }
+    }
+    .headline span {
+        padding: 0 24px !important;
+    }
+}
 
+@media screen and (max-width: 445px) {
+    .headline-parts {
+        h1 {
+            font-size: 2.25rem !important;
+        }
+        h2 {
+            font-size: 1.47rem !important;
+            margin-top: 10px;
+        }
+        span {
+            font-size: 1.7rem !important;
+            margin-right: -10px !important;
+        }
+    }
+    .aboutme-shortbox {
+        p {
+            margin: 0 0 0 12px !important;
+        }
+        img {
+            height: 32px !important;
+        }
+    }
+    .social-links {
+        padding: 200px 16px 0 0;
+        justify-content: center;
+    }
+    .small-line {
+        position: absolute;
+        left: 0;
+        width: 75px !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .headline-parts {
+        h1 {
+            font-size: 2rem !important;
+        }
+        h2 {
+            font-size: 1.375rem !important;
+            margin-top: 10px;
+            letter-spacing: 0.75px;
+        }
+        span {
+            font-size: 1.5rem !important;
+            margin-right: -10px !important;
+        }
+    }
+    .small-line {
+        width: 60px !important;
+    }
+}
