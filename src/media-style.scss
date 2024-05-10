@@ -63,6 +63,10 @@
     .me {
         height: 420px !important;
     }
+    .shadow{
+        margin-left: 100px;
+        background-position-x: 0 !important;
+    }
     h1 {
         font-size: 4rem !important;
     }
@@ -100,7 +104,13 @@
         right: 46px !important;
         width: 24px !important;
     }
-
+    .me {
+        height: 400px !important;
+    }
+    .shadow{
+        margin-left: 50px;
+        background-position-x: 0 !important;
+    }
     .profil-wrapper {
         left: calc(100% - 480px) !important;
         top: calc(50% - 160px) !important;
@@ -143,10 +153,6 @@
         background-size: 280px !important;
         background-position-y: 30px !important;
         background-position-x: -20px !important;
-    }
-    .me {
-        height: 400px !important;
-        margin: 0 -50px 0 15px !important;
     }
 
     .mg-top {
@@ -192,6 +198,9 @@
 }
 
 @media screen and (max-width: 880px) {
+    .shadow{
+        margin-left: 0px;
+    }
     aside {
         margin-top: 100px !important;
     }
@@ -219,6 +228,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .shadow{
+        margin-left: -70px;
+    }
     .mail {
         display: none;
     }
@@ -284,8 +296,13 @@
             margin: 25px 10px !important;
         }
     }
-    .me {
+    .me{
         margin: 0 !important;
+    }
+    .shadow {
+        justify-content: center;
+        background-size: cover;
+        margin: 0;
     }
     nav {
         gap: 1rem !important;
@@ -384,6 +401,9 @@
     .headline span {
         padding: 0 24px !important;
     }
+    .profil-wrap {
+        padding: 0 !important;
+    }
 }
 
 @media screen and (max-width: 445px) {
@@ -436,5 +456,9 @@
     }
     .small-line {
         width: 60px !important;
+    }
+    .shadow {
+        background-size: cover;
+        width: 120% !important;
     }
 }

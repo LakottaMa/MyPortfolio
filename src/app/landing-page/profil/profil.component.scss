@@ -1,12 +1,12 @@
 @import "../../../styles.scss";
-@import"../../../media-style.scss";
+@import "../../../media-style.scss";
 section {
     position: relative;
     align-items: flex-start;
-    // justify-content: space-between;
+    padding: 0;
     .me {
         height: 700px;
-        margin-left: -20px;
+        margin-left: 80px;
     }
 }
 
@@ -38,7 +38,7 @@ button {
     flex-direction: column;
 }
 
-.profil-wrapper{
+.profil-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: right;
@@ -47,6 +47,16 @@ button {
     top: calc(50% - 220px);
     left: calc(100% - 868px);
     z-index: 2;
+}
+
+.shadow {
+    display: flex;
+    background-image: url("../../../assets/img/groupe_shadow_profil.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 40px;
+    background-position-x: -56px;
+    width: 100%;
 }
 
 .text:nth-last-child(1) {
