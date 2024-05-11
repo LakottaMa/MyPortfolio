@@ -63,7 +63,7 @@
     .me {
         height: 420px !important;
     }
-    .shadow{
+    .shadow {
         margin-left: 100px;
         background-position-x: 0 !important;
     }
@@ -107,9 +107,8 @@
     .me {
         height: 400px !important;
     }
-    .shadow{
+    .shadow {
         margin-left: 50px;
-        background-position-x: 0 !important;
     }
     .profil-wrapper {
         left: calc(100% - 480px) !important;
@@ -198,7 +197,7 @@
 }
 
 @media screen and (max-width: 880px) {
-    .shadow{
+    .shadow {
         margin-left: 0px;
     }
     aside {
@@ -228,7 +227,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .shadow{
+    .shadow {
         margin-left: -70px;
     }
     .mail {
@@ -296,19 +295,18 @@
             margin: 25px 10px !important;
         }
     }
-    .me{
+    .me {
         margin: 0 !important;
     }
     .shadow {
         justify-content: center;
         background-size: cover;
-        margin: 0;
+        background-position: center;
+
+        margin-left: 0;
     }
-    nav {
-        gap: 1rem !important;
-        a {
-            font-size: 1.125rem !important;
-        }
+    .toggle-container {
+        display: block !important;
     }
 
     .scroll-down-arrow {
@@ -341,9 +339,6 @@
 }
 
 @media screen and (max-width: 536px) {
-    nav {
-        display: none !important;
-    }
     .wrap-container {
         gap: 0 !important;
     }
