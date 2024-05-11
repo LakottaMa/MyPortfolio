@@ -133,7 +133,7 @@
     }
 
     .img-line-right {
-        width: 50px !important;
+        width: 100px !important;
     }
 
     .aboutme-shortbox {
@@ -300,9 +300,7 @@
     }
     .shadow {
         justify-content: center;
-        background-size: cover;
-        background-position: center;
-
+        background-position: center!important;
         margin-left: 0;
     }
     .toggle-container {

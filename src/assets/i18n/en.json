@@ -1,0 +1,41 @@
+{
+    "AboutMe": "About Me",
+    "Skills": "Skills",
+    "I am": "I am",
+    "Frontend Developer": "Frontend Developer",
+
+
+
+    "Am p1": "Hello, I am Marcel Lakotta, a Frontend Developer based in Dahlen (Sachsen) Germany, gaining my first experience with various projects.",
+    "Am p2": "I completed my continuing education as a Frontend Developer at the Developer Academy. Alongside professional mentors, I learned to write and read code. Consequently, I deepened and expanded my knowledge in this field.",
+    "Am p3": "Whether working with a team or independently, I specialize in developing web applications using HTML, CSS, JavaScript, GitHub, Angular, and Firebase. Feel free to explore my projects to get a sense of what I've been working on.",
+
+
+
+    "MySk": "My skills",
+    "MySk p": "I have grown my frontend dewvelopment skills that have allowed me to create different real projects.",
+
+
+
+    "Pf span": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "Pf tmpl 1 p": "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop, assign users and categories.",
+    "Pf tmpl 2 p": "A simple jump and run game based on an object oriented approach. Help Pepe to find coins and bottles to fight the small and big chicks. The big, dangerous rooster awaits Pepe as the final boss.",
+
+
+
+    "Cnt": "Contact",
+    "Cnt h3": "Got a problem to solve?",
+    "Cnt p1": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "Cnt p2": "Need a Frontend developer? <b>Contact me!</b>",
+    "placeholder name": "Your name",
+    "placeholder email": "Your email",
+    "placeholder message": "Your message",
+    "Cnt span front": " I've read the ",
+    "Cnt span end": "anagree to the processing of my data as outlined.",
+    "Cnt btn span": "send Message :&#41;",
+
+
+
+    "Privacy Policy": "Privacy Policy",
+    "Imprint": "imprint"
+}

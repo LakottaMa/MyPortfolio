@@ -1,20 +1,25 @@
 <section>
   <h5 (click)="scrollToTop()" class="cp">Marcel</h5>
   <nav class="desktop_menu" [class.mobile_menu]="menuValue">
-    <a href="#aboutMe" (click)="closeMenu()" [ngClass]="{'active': isActiveLink === 'aboutMe'}" (click)="setActiveLink('aboutMe')">About
-      me</a>
+    <a href="#aboutMe" (click)="closeMenu()" [ngClass]="{'active': isActiveLink === 'aboutMe'}"
+      (click)="setActiveLink('aboutMe')">{{'AboutMe' | translate}}</a>
     <a href="#mySkills" (click)="closeMenu()" [ngClass]="{'active': isActiveLink === 'mySkills'}"
-      (click)="setActiveLink('mySkills')">Skills</a>
+      (click)="setActiveLink('mySkills')">{{'Skills' | translate}}</a>
     <a href="#portfolio" (click)="closeMenu()" [ngClass]="{'active': isActiveLink === 'portfolio'}"
       (click)="setActiveLink('portfolio')">Portfolio</a>
     <a href="#contact" class="contact d-none" (click)="closeMenu()">Contact</a>
+    <div class="lang">
+      <span (click)="changeLanguage('en')" >EN</span>
+      <p> | </p>
+      <span (click)="changeLanguage('de')">DE</span>
+    </div>
   </nav>
   <div class="toggle-container d-none" (click)="openMenu()">
-  <input type="checkbox" id="checkbox" [(ngModel)]="menuValue">
-  <label for="checkbox" class="toggle">
+    <input type="checkbox" id="checkbox" [(ngModel)]="menuValue">
+    <label for="checkbox" class="toggle">
       <div class="bars" id="bar1"></div>
       <div class="bars" id="bar2"></div>
       <div class="bars" id="bar3"></div>
-  </label>
+    </label>
   </div>
 </section>

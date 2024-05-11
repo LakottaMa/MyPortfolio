@@ -1,144 +1,162 @@
 @import "../../../styles.scss";
 @import "../../../media-style.scss";
 
-
 section {
-    position: sticky;
-    top: 0;
-    background-color: $bg-primary-color;
+  position: sticky;
+  top: 0;
+  background-color: $bg-primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 100px;
+  z-index: 1;
+
+  h5 {
+    font-size: 2rem;
+  }
+
+  .desktop_menu {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    padding: 0 100px;
-    z-index: 1;
+    gap: 2rem;
 
-    h5 {
-        font-size: 2rem;
+    a {
+      position: relative;
+      text-decoration: none;
+      font-size: 1.5rem;
+      &.active {
+        color: $lightblue;
+      }
+      &:hover {
+        color: $lightblue;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $blue;
+        border-radius: 5px;
+        bottom: -8px;
+        height: 4px;
+        width: 0;
+        left: 0;
+        transition: all 0.125s ease-out;
+      }
+      &:hover::before {
+        width: 50%;
+      }
+      &.active::before {
+        width: 100%;
+      }
     }
+  }
+}
 
-    .desktop_menu {
-        display: flex;
-        gap: 2rem;
-
-        a {
-            position: relative;
-            text-decoration: none;
-            font-size: 1.5rem;
-            &.active {
-                color: $lightblue;
-              }
-            &:hover {
-                color: $lightblue;
-            }
-            &::before {
-                position: absolute;
-                content: "";
-                background-color: $blue;
-                border-radius: 5px;
-                bottom: -8px;
-                height: 4px;
-                width: 0;
-                left: 0;
-                transition: all 0.125s ease-out;
-            }
-            &:hover::before {
-                width: 50%;
-            }
-            &.active::before {
-                width: 100%;
-              }
-        }
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  span {
+    font-size: 1.25rem;
+    cursor: pointer;
+    &:hover {
+      color: $lightblue;
     }
+  }
+  p {
+    font-size: 1.5rem;
+  }
 }
 
 #checkbox {
-    display: none;
-  }
-  
-  .toggle {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    display: flex;
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.3s;
+  z-index: 1;
+}
+
+.bars {
+  width: 100%;
+  height: 3.75px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.5s;
+}
+
+#bar1,
+#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.2s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.2s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.2s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.2s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.2s;
+  transform: rotate(180deg);
+}
+
+@media screen and (min-width: 310px) and (max-width: 700px) {
+  .desktop_menu {
+    position: fixed !important;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
-    transition-duration: .3s;
-    z-index: 1;
-  }
-  
-  .bars {
-    width: 100%;
-    height: 3.75px;
-    background-color: $grey;
-    border-radius: 4px;
-  }
-  
-  #bar2 {
-    transition-duration: .5s;
-  }
-  
-  #bar1,#bar3 {
-    width: 70%;
-  }
-  
-  #checkbox:checked + .toggle .bars {
-    position: absolute;
-    transition-duration: .2s;
-  }
-  
-  #checkbox:checked + .toggle #bar2 {
-    transform: scaleX(0);
-    transition-duration: .2s;
-  }
-  
-  #checkbox:checked + .toggle #bar1 {
-    width: 100%;
-    transform: rotate(45deg);
-    transition-duration: .2s;
-  }
-  
-  #checkbox:checked + .toggle #bar3 {
-    width: 100%;
-    transform: rotate(-45deg);
-    transition-duration: .2s;
-  }
-  
-  #checkbox:checked + .toggle {
-    transition-duration: .2s;
-    transform: rotate(180deg);
-  }
-
-
-  @media screen and (min-width: 310px) and (max-width: 700px) {
-    .desktop_menu {
-      position: fixed !important; 
-      flex-direction: column;
-      justify-content: center;
-      right: -100%;
-      transition: 0.2s ease-in-out;
-      top: 100px;
-      background: rgba(65, 72, 86, 0.9);
-      height: 50dvh;
-      a{
-        padding-left: 40%;
-      }
-    }
-    .mobile_menu {
-      width: 100%;
-      right: 0;
-      transition: 0.2s ease-in-out;
-      .contact {
-        display: block;
-      }
+    right: -100%;
+    transition: 0.2s ease-in-out;
+    top: 100px;
+    background: rgba(65, 72, 86, 0.9);
+    height: 50dvh;
+    a {
+      padding-left: 40%;
     }
   }
-
-  @media screen and (max-height: 900px) {
-    .mobile_menu {
-        height: 100dvh !important;
+  .lang {
+    padding-left: 40%;
+  }
+  .mobile_menu {
+    width: 100%;
+    right: 0;
+    transition: 0.2s ease-in-out;
+    .contact {
+      display: block;
     }
   }
+}
+
+@media screen and (max-height: 900px) {
+  .mobile_menu {
+    height: 100dvh !important;
+  }
+}

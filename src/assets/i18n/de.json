@@ -1,0 +1,40 @@
+{
+    "AboutMe": "Ueber Mich",
+    "Skills": "Faehigkeiten",
+    "I am": "Ich bin",
+    "Frontend Developer": "Frontend Entickler",
+
+
+
+    "Am p1": "Am p1",
+    "Am p2": "Am p2",
+    "Am p3": "Am p3",
+
+
+
+    "MySk": "Meine Faehigkeiten",
+    "MySk p": "Meine Faehigkeiten p",
+
+
+
+    "Pf span": "Portfolio span",
+    "Pf tmpl 1 p": "Pf tmpl 1 p",
+    "Pf tmpl 2 p": "Pf tmpl 2 p",
+
+
+
+    "Cnt": "Kontakt",
+    "Cnt h3": "Kontakt h3",
+    "Cnt p1": "Kontakt p1",
+    "Cnt p2": "Kontakt p2",
+    "placeholder name": "Ihr Name",
+    "placeholder email": "Ihre Email",
+    "placeholder message": "Ihre Nachricht",
+    "Cnt span": "Kontakt span",
+    "Cnt btn span": "Nachricht senden :&#41;",
+
+
+
+    "Privacy Policy": "Datenschutz",
+    "Imprint": "Impressum"
+}
