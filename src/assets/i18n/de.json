@@ -1,40 +1,35 @@
 {
-    "AboutMe": "Ueber Mich",
-    "Skills": "Faehigkeiten",
+    "AboutMe": "Über Mich",
+    "Skills": "Fähigkeiten",
     "I am": "Ich bin",
     "Frontend Developer": "Frontend Entickler",
-
-
-
-    "Am p1": "Am p1",
-    "Am p2": "Am p2",
-    "Am p3": "Am p3",
-
-
-
-    "MySk": "Meine Faehigkeiten",
-    "MySk p": "Meine Faehigkeiten p",
-
-
-
-    "Pf span": "Portfolio span",
-    "Pf tmpl 1 p": "Pf tmpl 1 p",
-    "Pf tmpl 2 p": "Pf tmpl 2 p",
-
-
-
+    "Am p1": "Hallo, ich bin Marcel Lakotta, ein Frontend-Entwickler aus Dahlen (Sachsen), der mit verschiedenen Projekten erste Erfahrungen sammelt.",
+    "Am p2": "Meine Ausbildung zum Frontend-Entwickler habe ich an der Developer Academy absolviert. An der Seite von professionellen Mentoren habe ich gelernt, wie man Code schreibt und liest. So konnte ich mein Wissen in diesem Bereich vertiefen und erweitern.",
+    "Am p3": "Ich arbeite sowohl im Team als auch selbstständig und bin auf die Entwicklung von Webanwendungen mit HTML, CSS, JavaScript, GitHub, Angular und Firebase spezialisiert. Werfen Sie einen Blick auf meine Projekte, um eine Vorstellung davon zu bekommen, woran ich gearbeitet habe.",
+    "MySk": "Meine Fähigkeiten",
+    "MySk p": "Ich habe meine Fähigkeiten im Bereich der Front-End-Entwicklung ausgebaut, was es mir ermöglichte, verschiedene reale Projekte zu erstellen.",
+    "Pf span": "Entdecken Sie hier eine Auswahl meiner Arbeiten - interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "Pf tmpl 1 p": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben per Drag & Drop, weisen Sie Benutzer und Kategorien zu.",
+    "Pf tmpl 2 p": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Flaschen zu finden, um die kleinen und großen Küken zu bekämpfen. Als Endgegner wartet der große, gefährliche Hahn auf Pepe.",
     "Cnt": "Kontakt",
-    "Cnt h3": "Kontakt h3",
-    "Cnt p1": "Kontakt p1",
-    "Cnt p2": "Kontakt p2",
-    "placeholder name": "Ihr Name",
-    "placeholder email": "Ihre Email",
-    "placeholder message": "Ihre Nachricht",
-    "Cnt span": "Kontakt span",
-    "Cnt btn span": "Nachricht senden :&#41;",
-
-
-
+    "Cnt h3": "Sie haben spannende Projekte und brauchen Unterstützung?",
+    "Cnt p1": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, mehr über Ihre Ideen zu erfahren und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+    "Cnt p21": "Brauchen Sie einen Frontend-Entwickler?",
+    "Cnt p22": "Nehmen Sie Kontakt mit mir auf!",
+    "Ph name": "Ihr Name",
+    "Ph email": "Ihre Email",
+    "Ph message": "Ihre Nachricht",
+    "Cnt span front": " Ich habe den ",
+    "Cnt span end": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "Cnt btn span": "Nachricht senden",
+    "sentSuccess": "Nachricht erfolgreich gesendet!",
+    "nameErr": "Bitte geben Sie Ihren Namen ein.",
+    "emailErrValid": "Bitte geben Sie eine gültige E-Mail Adresse ein.",
+    "emailErr": "Bitte geben Sie Ihre E-Mail Adresse ein.",
+    "messageErr": "Bitte geben Sie Ihre Nachricht ein.",
+    "messageErrValid": "Ihre Nachricht muss mindestens 10 Zeichen lang sein.",
+    "acceptErr": "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
+    "sendErr": "Fehler beim Senden der E-Mail. Bitte versuchen Sie es später noch einmal.",
     "Privacy Policy": "Datenschutz",
     "Imprint": "Impressum"
 }

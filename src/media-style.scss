@@ -259,9 +259,8 @@
         flex-direction: column-reverse;
     }
     .text {
-        h3,
-        p {
-            text-align: center;
+        h1{
+            margin-left: 12px;
         }
         span {
             display: flex;
@@ -302,9 +301,6 @@
         justify-content: center;
         background-position: center!important;
         margin-left: 0;
-    }
-    .toggle-container {
-        display: block !important;
     }
 
     .scroll-down-arrow {

@@ -45,7 +45,6 @@ export class HeaderComponent {
       this.isEnActive = false;
       this.isDeActive = true;
       this.translate.use('de');
-      
     }
   }
 }

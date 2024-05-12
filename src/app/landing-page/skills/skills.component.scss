@@ -42,7 +42,6 @@ button {
     padding-left: 40px;
     div {
         background-color: $bg-primary-color;
-
         display: flex;
         align-items: center;
         img {
@@ -56,7 +55,8 @@ button {
 }
 
 .text:nth-last-child(1) {
-    align-items: center;
+    align-items: end;
+    text-align: end;
 }
 
 @media screen and (max-width: 1350px) {
@@ -71,13 +71,13 @@ button {
         justify-content: center;
         gap: 2rem;
     }
-    .text{
+    .text {
         padding: 0;
 
         img {
-            width: 80%;
+            width: 90%;
             left: 0;
-            margin: auto;
+            margin: 0 0 0 auto;
             z-index: -1;
         }
         a {
@@ -87,11 +87,11 @@ button {
             margin: auto;
             bottom: 0;
         }
-        h1{
-            margin: 0 24px;
+        h1 {
+            margin: 0 12px;
         }
         p {
-            margin: 12px 12px;
+            margin: 12px;
         }
     }
 }

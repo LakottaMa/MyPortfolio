@@ -7,11 +7,11 @@
       (click)="setActiveLink('mySkills')">{{'Skills' | translate}}</a>
     <a href="#portfolio" (click)="closeMenu()" [ngClass]="{'active': isActiveLink === 'portfolio'}"
       (click)="setActiveLink('portfolio')">Portfolio</a>
-    <a href="#contact" class="contact d-none" (click)="closeMenu()">Contact</a>
+    <a href="#contact" class="contact d-none" (click)="closeMenu()">{{'Cnt' | translate}}</a>
     <div class="lang">
-      <span (click)="changeLanguage('en')" >EN</span>
+      <span (click)="changeLanguage('en')" [ngClass]="{'activeLang': isEnActive}">EN</span>
       <p> | </p>
-      <span (click)="changeLanguage('de')">DE</span>
+      <span (click)="changeLanguage('de')" [ngClass]="{'activeLang': isDeActive}">DE</span>
     </div>
   </nav>
   <div class="toggle-container d-none" (click)="openMenu()">

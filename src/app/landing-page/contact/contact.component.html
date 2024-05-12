@@ -1,34 +1,34 @@
 <section class="mg-top">
     <div class="headline">
         <img class="line" src="../../../../assets/img/small_line_blue_left.png" alt="small line">
-        <h1>Contact</h1>
+        <h1>{{'Cnt' | translate}}</h1>
     </div>
     <div class="contact-form">
         <div class="text">
-            <h3>Got a problem to solve?</h3>
-            <p>Contact me through this form, I am interested in hearing from you,
-                knowing your ideas and contributing to your projects with my work.</p>
-            <p>Need a Frontend developer? <b>Contact me!</b></p>
+            <h3>{{'Cnt h3' | translate}}</h3>
+            <p>{{'Cnt p1' | translate}}</p>
+            <p>{{'Cnt p21' | translate}}<br>
+                 <b>{{'Cnt p22' | translate}}</b></p>
         </div>
-        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
             <div class="form-group">
-                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" minlength="5" name="user_name" placeholder="Your name" required>
-                <div class="error-input" *ngIf="name.invalid && (name.dirty || name.touched)">
-                    <span *ngIf="name.errors?.['required']">Your name is empty</span>
+                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" minlength="5" name="user_name" placeholder="{{'Ph name' | translate}}" required>
+                <div class="error-input" *ngIf="name.invalid && (name.dirty || name.touched || contactForm.submitted)">
+                    <span *ngIf="name.errors?.['required']">{{'nameErr' | translate}}</span>
                 </div>
             </div>
             <div class="form-group">
-                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="user_email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-                <div class="error-input" *ngIf="email.invalid && (email.dirty || email.touched)">
-                    <span *ngIf="email.errors?.['required']">Your email is empty</span>
-                    <span *ngIf="email.errors?.['pattern']">Please enter a valid email address</span>
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="user_email" placeholder="{{'Ph email' | translate}}" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                <div class="error-input" *ngIf="email.invalid && (email.dirty || email.touched || contactForm.submitted)">
+                    <span *ngIf="email.errors?.['required']">{{'emailErr' | translate}}</span>
+                    <span *ngIf="email.errors?.['pattern']">{{'emailErrValid' | translate}}</span>
                 </div>
             </div>
             <div class="form-group">
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" rows="10" minlength="10" name="user_message" placeholder="Your message" required></textarea>
-                <div class="error-input" *ngIf="message.invalid && (message.dirty || message.touched)">
-                    <span *ngIf="message.errors?.['required']">Your message is empty.</span>
-                    <span *ngIf="message.errors?.['minlength'] && !message.errors?.['required']">Your message must be at least 10 characters long.</span>
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" rows="10" minlength="10" name="user_message" placeholder="{{'Ph message' | translate}}" required></textarea>
+                <div class="error-input" *ngIf="message.invalid && (message.dirty || message.touched || contactForm.submitted)">
+                    <span *ngIf="message.errors?.['required']">{{'messageErr' | translate}}</span>
+                    <span *ngIf="message.errors?.['minlength'] && !message.errors?.['required']">{{'messageErrValid' | translate}}</span>
                 </div>
             </div>
             <div class="checkout">
@@ -37,13 +37,13 @@
                         <input type="checkbox" id="c1" [checked]="checked" (change)="checked = !checked" required>
                         <label for="c1" class="cp"></label>
                     </div>
-                    <span> I've read the <a href="/privacy-policy" target="_blank">privacy policy</a> anagree to the processing of my data as outlined.</span>
+                    <span> {{'Cnt span front' | translate}} <a href="/privacy-policy" target="_blank">{{'Privacy Policy' | translate}}</a> {{'Cnt span end' | translate}}</span>
                  </div>
                 <div class="error-input" *ngIf="!checked && contactForm.valid">
-                    <span *ngIf="!contactForm.errors?.['required']">Please accept the privacy policy.</span>
+                    <span *ngIf="!contactForm.errors?.['required']">{{'acceptErr' | translate}}</span>
                 </div>
                 <button class="btn" type="submit" [ngClass]="{'blue-background': checked && contactForm.valid, 'default-background': !(checked && contactForm.valid)}">
-                    <span>Send message :&#41;</span>
+                    <span>{{'Cnt btn span' | translate}} :&#41;</span>
                 </button>
             </div>
         </form>
@@ -57,10 +57,10 @@
 
     <div *ngIf="mailSent" class="message-container success"
         [ngClass]="{'slide-in': messageState === 'visible', 'slide-out': messageState === 'closing'}">
-        Mail sent successfully!
+        {{'sentSuccess' | translate}}
     </div>
     <div *ngIf="mailError" class="message-container error"
         [ngClass]="{'slide-in': messageState === 'visible', 'slide-out': messageState === 'closing'}">
-        Error sending mail. Please try again later.
+        {{'sendErr' | translate}}
     </div>
 </section>

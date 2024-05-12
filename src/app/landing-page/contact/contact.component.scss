@@ -60,6 +60,15 @@ form {
         border-color: $green;
     }
 
+    input.ng-invalid,
+    textarea.ng-invalid {
+        &:focus {
+            outline: none;
+            border-color: $red;
+        }
+        
+    }
+
     input,
     textarea {
         padding: 15px 25px;

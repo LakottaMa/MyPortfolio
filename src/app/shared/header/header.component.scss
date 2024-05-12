@@ -73,7 +73,7 @@ section {
 
 .toggle {
   position: relative;
-  width: 30px;
+  width: 35px;
   height: 30px;
   cursor: pointer;
   display: flex;
@@ -98,7 +98,7 @@ section {
 
 #bar1,
 #bar3 {
-  width: 70%;
+  width: 80%;
 }
 
 #checkbox:checked + .toggle .bars {
@@ -127,8 +127,11 @@ section {
   transition-duration: 0.2s;
   transform: rotate(180deg);
 }
+.activeLang {
+  color: $lightblue;
+}
 
-@media screen and (min-width: 310px) and (max-width: 700px) {
+@media screen and (min-width: 310px) and (max-width: 880px) {
   .desktop_menu {
     position: fixed !important;
     flex-direction: column;
@@ -152,6 +155,9 @@ section {
     .contact {
       display: block;
     }
+  }
+  .toggle-container {
+    display: block !important;
   }
 }
 
