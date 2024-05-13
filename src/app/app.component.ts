@@ -17,12 +17,14 @@ import { HttpClientModule } from '@angular/common/http';
 export class AppComponent {
   title = 'Marcel Lakotta';
 
-  constructor() {
-  }
+  constructor() { }
 
   private scrollTimeout: any;
 
   @HostListener('window:scroll')
+  /**
+   * Function that handles the scroll event. It sets the custom scrollbar thumb color and resets it after a delay.
+   */
   onScroll() {
     const scrollbarThumbColor = '--scrollbar-thumb-color';
     const defaultScrollbarThumbColor = '';
@@ -32,6 +34,9 @@ export class AppComponent {
       document.documentElement.style.setProperty(scrollbarThumbColor, defaultScrollbarThumbColor);
     }, 50);
   }
+  /**
+   * Lifecycle hook that is called when the component is destroyed.
+   */
   ngOnDestroy() {
     clearTimeout(this.scrollTimeout);
   }
