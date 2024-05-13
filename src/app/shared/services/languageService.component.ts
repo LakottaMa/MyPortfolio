@@ -5,8 +5,8 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root'
 })
 export class LanguageService {
-  isEnActive: boolean = true;
-  isDeActive: boolean = false;
+  isEnActive: boolean = true;  //setzt EN btn aktive
+  isDeActive: boolean = false; //setzt DE btn aktive
 
   constructor(public translate: TranslateService) {
   }

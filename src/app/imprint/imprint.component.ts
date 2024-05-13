@@ -21,10 +21,12 @@ export class ImprintComponent implements OnInit {
     // }
 
     // this.translate.use('de');  //wird dirkt überstezt
-    this.languageService.translate.use('de');  //wird dirkt überstezt
+    // this.languageService.translate.use('de'); //wird dirkt überstezt
   }
 
   ngOnInit(): void {
+
+
     if (this.languageService.translate.currentLang === 'en') {
       console.log('ImprintCompt use en');
       this.translate.use('en');
@@ -32,6 +34,13 @@ export class ImprintComponent implements OnInit {
       console.log('ImprintCompt use de');
       this.translate.use('de');
     }
+
+    // if (this.languageService.isEnActive){
+    //   this.translate.use('en');
+    // } else if (this.languageService.isDeActive){
+    //   this.translate.use('de');
+    // }
+
     // this.translate.use('de'); //wird dirkt überstezt
     // this.languageService.translate.use('de'); //wird dirkt überstezt
   }
