@@ -221,6 +221,12 @@
             font-size: 1.125rem !important;
         }
     }
+    .shadow-portfolio {
+        scale: 0.8 !important;
+        right: 0 !important;
+        left: auto !important;
+    }
+
     .mg-top {
         margin-top: 70px !important;
     }
@@ -254,6 +260,7 @@
     .wrapper {
         gap: 0 !important;
         flex-direction: column;
+        text-align: center !important;
     }
     .wrap-reverse {
         flex-direction: column-reverse;

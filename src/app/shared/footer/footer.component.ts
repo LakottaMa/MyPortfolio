@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ServicesComponent } from '../services/services.component';
+import { LanguageService } from '../services/languageService.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -11,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  constructor(private servicesComponent: ServicesComponent) { }
+  constructor(private servicesComponent: ServicesComponent, private languageService: LanguageService) { }
 
   scrollToTop(): void {
     this.servicesComponent.scrollToTop();
@@ -19,5 +20,8 @@ export class FooterComponent {
 
   get isActiveLink(): string {
     return this.servicesComponent.isActiveLink
+  }
+  get isEnActive(): boolean {
+    return this.languageService.isEnActive
   }
 }

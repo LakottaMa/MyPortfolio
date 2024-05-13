@@ -1,6 +1,6 @@
 @import "../../styles.scss";
 
-section {
+section {position: relative;
     margin: 56px 0 36px 0;
     justify-content: center;
     flex-direction: column;
@@ -37,9 +37,9 @@ p {
 }
 
 .close-button {
-    position: fixed;
-    top: 0px;
-    right: 40px;
+    position: absolute;
+    top: -20px;
+    right: 20px;
     text-align: center;
     a {
         height: 4rem;

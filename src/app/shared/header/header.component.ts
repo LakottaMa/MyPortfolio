@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ServicesComponent } from '../services/services.component';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '../services/languageService.component';
 
 @Component({
   selector: 'app-header',
@@ -15,10 +16,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 export class HeaderComponent {
   menuValue: boolean = false;
-  isEnActive: boolean = true;
-  isDeActive: boolean = false;
-
-
+ 
   openMenu() {
     this.servicesComponent.isActiveLink = '';
   }
@@ -26,7 +24,8 @@ export class HeaderComponent {
     this.menuValue = false;
   }
 
-  constructor(private servicesComponent: ServicesComponent, private translate: TranslateService) { }
+  constructor(private servicesComponent: ServicesComponent, public translate: TranslateService, private languageService: LanguageService) { }
+
   setActiveLink(link: string): void {
     this.servicesComponent.setActiveLink(link);
   }
@@ -36,15 +35,15 @@ export class HeaderComponent {
   get isActiveLink(): string {
     return this.servicesComponent.isActiveLink;
   }
+  get isEnActive(): boolean {
+    return this.languageService.isEnActive;
+  }
+  get isDeActive(): boolean {
+    return this.languageService.isDeActive;
+  }
   changeLanguage(lang: string) {
-    if (lang === 'en') {
-      this.isEnActive = true;
-      this.isDeActive = false;
-      this.translate.use('en');
-    } else if (lang === 'de') {
-      this.isEnActive = false;
-      this.isDeActive = true;
-      this.translate.use('de');
-    }
+    console.log('click:', lang);
+    this.languageService.changeLanguage(lang);
+    console.log('service:', this.languageService.translate.currentLang)
   }
 }

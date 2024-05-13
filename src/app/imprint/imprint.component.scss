@@ -1,6 +1,7 @@
 @import "../../styles.scss";
 
 section {
+    position: relative;
     height: calc(100dvh - 200px);
     justify-content: center;
     flex-direction: column;
