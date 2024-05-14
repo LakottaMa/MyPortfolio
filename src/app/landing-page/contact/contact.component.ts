@@ -4,7 +4,6 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ServicesComponent } from '../../shared/services/services.component';
 import { TranslateModule } from '@ngx-translate/core';
-
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -22,14 +21,23 @@ export class ContactComponent {
   checked: boolean = false;
 
   constructor(private servicesComponent: ServicesComponent, private http: HttpClient) { }
-
+  /**
+   * Scrolls the page to the top by calling the scrollToTop method of the servicesComponent.
+   */
   scrollToTop(): void {
     this.servicesComponent.scrollToTop();
   }
-
+  /**
+   * Returns the active link from the services component.
+   * @return {string} The active link value.
+   */
   get isActiveLink(): string {
     return this.servicesComponent.isActiveLink
   }
+    /**
+   * A function that shows different message states based on type.
+   * @param {string} type - the type of message state to show
+   */
   showMessage(type: string) {
     this.messageState = 'hidden';
     setTimeout(() => {

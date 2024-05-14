@@ -15,7 +15,7 @@ export class ServicesComponent {
    * Scrolls to the top of the page by setting the window scroll to top and resetting the isActiveLink.
    */
   scrollToTop(): void {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0});
     this.isActiveLink = '';
   }
 }
