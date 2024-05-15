@@ -4,9 +4,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 200px;
+    height: 196px;
     padding: 0 100px;
-    border-top: solid 4px $lightblue;
 
     a {
         text-decoration: none;
@@ -29,6 +28,21 @@ section {
                 transform: scale(1.35);
             }
         }
+    }
+}
+
+.line {
+    position: relative;
+    width: 100%;
+    background-color: $lightblue;
+    border-radius: 4px;
+    &::after {
+        width: 150px;
+        height: 4px;
+    }
+    &::before {
+        width: 150px;
+        height: 4px;
     }
 }
 

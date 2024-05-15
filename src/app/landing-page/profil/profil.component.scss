@@ -71,12 +71,26 @@ button {
     z-index: -1;
 }
 
+.soft-border-left {
+    &::before {
+        width: 50px;
+        height: 4px;
+    }
+}
+
 .seperator-img {
     position: relative;
     background: url("../../../assets/img/mask_bg.png") no-repeat;
     left: 0;
     height: 100%;
     width: 100%;
+    &::before {
+        height: 100%;
+    }
+    &::after {
+        height: 100%;
+        width: 150px;
+    }
 }
 
 .scroll-down-arrow img {

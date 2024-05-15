@@ -4,6 +4,23 @@
 section {
     position: relative;
     flex-direction: column;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        left: 0px;
+        width: 300px;
+        background: linear-gradient(90deg, rgba(20, 29, 47, 1) 0%, rgba(20, 29, 47, 0) 100%);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        right: 0px;
+        bottom: 850px;
+        width: 300px;
+        background: linear-gradient(270deg, rgba(20, 29, 47, 1) 0%, rgba(20, 29, 47, 0) 100%);
+    }
 }
 
 .shadow-contact1 {
@@ -17,9 +34,8 @@ section {
     z-index: -1;
     left: 0;
     max-width: 100%;
-    bottom: 0;
+    bottom: 0px;
     margin: 0 auto;
-    opacity: 0.5;
 }
 
 .headline {
@@ -30,6 +46,13 @@ section {
     img {
         width: 50px;
         margin-right: 50px;
+    }
+}
+
+.soft-border-left {
+    &::before {
+        width: 50px;
+        height: 4px;
     }
 }
 
@@ -83,7 +106,6 @@ form {
             outline: none;
             border-color: $red;
         }
-        
     }
 
     input,
@@ -118,7 +140,10 @@ textarea {
     height: 124px;
     display: flex;
     flex-direction: column;
-    text-shadow: 2px 2px 2px $bg-primary-color, 0 0 25px black, 0 0 5px $bg-primary-color !important;
+    text-shadow:
+        2px 2px 2px $bg-primary-color,
+        0 0 25px black,
+        0 0 5px $bg-primary-color !important;
 
     div {
         display: flex;
@@ -159,7 +184,7 @@ textarea {
     position: absolute;
     right: 0px;
     bottom: -100px;
-    &:hover{
+    &:hover {
         svg rect {
             stroke: $lightblue;
         }

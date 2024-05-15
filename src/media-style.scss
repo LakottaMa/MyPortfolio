@@ -92,6 +92,25 @@
 }
 
 @media screen and (max-width: 1024px) {
+    section::before {
+        display: none !important;
+    }
+    section::after {
+        display: none !important;
+    }
+    .soft-border-left {
+        &::before {
+            display: none !important;
+        }
+    }
+    .soft-border-right {
+        &::after {
+            display: none !important;
+        }
+    }
+    .shadow-skills::before {
+        display: none !important;
+    }
     section {
         padding: 0 50px !important;
     }
@@ -102,6 +121,7 @@
     }
     .me {
         height: 400px !important;
+        margin-right: -50px !important;
     }
     .shadow {
         margin-left: 50px;
@@ -129,7 +149,7 @@
     }
 
     .img-line-right {
-        width: 100px !important;
+        width: 50px !important;
     }
 
     .aboutme-shortbox {
@@ -251,7 +271,7 @@
         flex-direction: column-reverse;
     }
     .text {
-        h1{
+        h1 {
             margin-left: 12px;
         }
         span {
@@ -291,7 +311,7 @@
     }
     .shadow {
         justify-content: center;
-        background-position: center!important;
+        background-position: center !important;
         margin-left: 0;
     }
 
@@ -325,6 +345,9 @@
 }
 
 @media screen and (max-width: 536px) {
+    .shadow-contact1 {
+        bottom: 980px !important;
+    }
     .wrap-container {
         gap: 0 !important;
     }
