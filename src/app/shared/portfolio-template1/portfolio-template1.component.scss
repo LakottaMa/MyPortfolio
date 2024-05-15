@@ -3,7 +3,7 @@
 @import "../../../media-style.scss";
 
 section {
-    margin-top: 116px;
+    margin-top: 100px;
     justify-content: space-around;
 }
 
@@ -58,4 +58,10 @@ section {
         background-color: $lightblue;
         scale: 1.1;
     }
+}
+
+@media screen and (max-height: 932px) {
+    .mg-top {
+        margin-top: 60px !important;
+    }    
 }

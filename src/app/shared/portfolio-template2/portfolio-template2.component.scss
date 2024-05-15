@@ -62,3 +62,9 @@ section {
         scale: 1.1;
     }
 }
+
+@media screen and (max-height: 932px) {
+    .mg-top {
+        margin-top: 60px !important;
+    }
+}

@@ -25,13 +25,16 @@
     h1 {
         font-size: 4.5rem !important;
     }
+
     h2 {
         font-size: 2.9rem !important;
     }
+
     .profil-wrapper {
         left: calc(100% - 740px) !important;
         top: calc(50% - 200px) !important;
     }
+
     .headline-parts span {
         font-size: 3.35rem !important;
     }
@@ -209,6 +212,12 @@
         p {
             margin: 25px 50px !important;
         }
+    }
+}
+
+@media screen and (max-height: 932px) {
+    .mg-top {
+        margin-top: 100px !important;
     }
 }
 

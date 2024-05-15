@@ -61,10 +61,10 @@ export class HeaderComponent {
   get isDeActive(): boolean {
     return this.languageService.isDeActive;
   }
-/**
- * Changes the language of the application and updates the active language flags.
- * @param {string} lang - The language code to change to.
- */
+  /**
+   * Changes the language of the application and updates the active language flags.
+   * @param {string} lang - The language code to change to.
+   */
   changeLanguage(lang: string) {
     this.languageService.changeLanguage(lang);
   }

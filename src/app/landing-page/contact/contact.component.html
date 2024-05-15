@@ -67,7 +67,6 @@
             </svg>
         </div>
     </div>
-
     <div *ngIf="mailSent" class="message-container success"
         [ngClass]="{'slide-in': messageState === 'visible', 'slide-out': messageState === 'closing'}">
         {{'sentSuccess' | translate}}
