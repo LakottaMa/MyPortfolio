@@ -22,10 +22,6 @@
         width: 120px !important;
     }
 
-    aside p {
-        font-size: 1.25rem !important;
-    }
-
     h1 {
         font-size: 4.5rem !important;
     }
@@ -155,7 +151,7 @@
     }
 
     .mg-top {
-        margin-top: 100px !important;
+        margin-top: 120px !important;
     }
 
     .wrap-container {
@@ -200,9 +196,6 @@
     .shadow {
         margin-left: 0px;
     }
-    aside {
-        margin-top: 100px !important;
-    }
 
     h1 {
         font-size: 3rem !important;
@@ -226,10 +219,6 @@
         right: 0 !important;
         left: auto !important;
     }
-
-    .mg-top {
-        margin-top: 70px !important;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -241,10 +230,6 @@
     }
     aside {
         width: fit-content !important;
-        margin-top: 70px !important;
-        p {
-            font-size: 1.125rem !important;
-        }
     }
     .me-photo-ellipse,
     .img-line-right {
@@ -455,6 +440,5 @@
     }
     .shadow {
         background-size: cover;
-        width: 120% !important;
     }
 }

@@ -14,7 +14,7 @@ import { LanguageService } from '../services/languageService.component';
 })
 export class HeaderComponent {
   menuValue: boolean = false;
-  constructor(private servicesComponent: ServicesComponent, public translate: TranslateService, private languageService: LanguageService) { } 
+  constructor(private servicesComponent: ServicesComponent, public translate: TranslateService, private languageService: LanguageService) { }
   /**
    * Sets the active link in the services component.
    */
@@ -66,8 +66,6 @@ export class HeaderComponent {
  * @param {string} lang - The language code to change to.
  */
   changeLanguage(lang: string) {
-    console.log('click:', lang);
     this.languageService.changeLanguage(lang);
-    console.log('service:', this.languageService.translate.currentLang)
   }
 }

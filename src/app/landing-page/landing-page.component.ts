@@ -17,5 +17,6 @@ import { TranslateModule } from '@ngx-translate/core';
     imports: [HeaderComponent, FooterComponent, CommonModule, PortfolioComponent, AboutMeComponent, SkillsComponent, PortfolioComponent, AboutMeComponent, SkillsComponent, ContactComponent, ProfilComponent, TranslateModule]
 })
 export class LandingPageComponent {
-    
+    constructor() {
+    }
 }
