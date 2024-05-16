@@ -67,5 +67,6 @@ export class HeaderComponent {
    */
   changeLanguage(lang: string) {
     this.languageService.changeLanguage(lang);
+    this.closeMenu();
   }
 }

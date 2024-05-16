@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
         debounceDelay: 50,
         throttleDelay: 99,
         offset: 100,
-        delay: 180,
+        delay: 80,
         duration: 600,
         easing: 'ease-out-back',
         once: false,

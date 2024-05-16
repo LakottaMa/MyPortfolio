@@ -222,6 +222,15 @@
 }
 
 @media screen and (max-width: 880px) {
+    a, h5, h1, label, span, p, button, svg, div {
+        -webkit-tap-highlight-color: transparent !important;
+    }
+    
+    a:focus, a:active, h5:focus, h5:active, h1:focus, h1:active, svg:focus, svg:active, label:focus, label:active, span:focus, span:active, p:focus, p:active, button:focus, button:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
     .shadow {
         margin-left: 0px;
     }

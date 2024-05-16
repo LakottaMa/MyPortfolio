@@ -4,7 +4,8 @@
 section {
   position: sticky;
   top: 0;
-  background-color: $bg-primary-color;
+  background: rgb(20, 29, 47);
+  background: linear-gradient(0deg, rgba(20, 29, 47, 0) 0%, rgba(20, 29, 47, 1) 13%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -161,7 +162,7 @@ section {
   }
 }
 
-@media screen and (max-height: 900px) {
+@media screen and (max-height: 932px) {
   .mobile_menu {
     height: 100dvh !important;
   }
