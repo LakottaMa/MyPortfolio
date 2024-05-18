@@ -40,13 +40,14 @@ $red: #e61c40;
         "Helvetica Neue",
         sans-serif;
     font-size: 16px;
+    -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
     color: aliceblue;
 }
 
-/* Scrollbalcken */
+/* Scrollbalken */
 ::-webkit-scrollbar {
     background-color: transparent;
     width: 10px;

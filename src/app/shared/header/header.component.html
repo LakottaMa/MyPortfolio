@@ -1,5 +1,5 @@
 <section>
-  <h5 (click)="scrollToTop()" class="cp">Marcel</h5>
+  <a href="#profil" (click)="scrollToTop()"><h5 class="cp">Marcel</h5></a>
   <nav class="desktop_menu" [class.mobile_menu]="menuValue">
     <a href="#aboutMe" (click)="closeMenu()" [ngClass]="{'active': isActiveLink === 'aboutMe'}"
       (click)="setActiveLink('aboutMe')">{{'AboutMe' | translate}}</a>
