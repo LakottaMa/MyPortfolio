@@ -11,6 +11,7 @@
     "Pf span": "Explore a selection of my work here - Interact with projects to see my skills in action.",
     "Pf tmpl 1 p": "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop, assign users and categories.",
     "Pf tmpl 2 p": "A simple jump and run game based on an object oriented approach. Help Pepe to find coins and bottles to fight the small and big chicks. The big, dangerous rooster awaits Pepe as the final boss.",
+    "Pf tmpl 3 p": "Messaging-Web-App for efficient team communication via channels and direct messages. It serves as a central platform to promote team networking.",
     "Cnt": "Contact",
     "Cnt h3": "You have exciting projects and need support?",
     "Cnt p1": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
@@ -65,7 +66,7 @@
     "titleh4 5":"Order processing",
 
 
-    
+
     "text p 1": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally. Detailed information on the subject of data protection can be found in our privacy policy, which you will find below this text.",
     "text p 2":"Data processing on this website is carried out by the operator of the website. The operator's contact details can be found in the ‘Information about the controller’ section of this privacy policy.",
     "text p 3":"On the one hand, your data is collected when you provide it to us. This may be data that you enter in a contact form, for example.",
